@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(aloam_velodyne)
 
 set(CMAKE_BUILD_TYPE "Release")
-set(CMAKE_CXX_FLAGS "-std=c++11")
+set(CMAKE_CXX_FLAGS "-std=c++14")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -Wall -g")
 
 find_package(catkin REQUIRED COMPONENTS
@@ -17,6 +17,8 @@ find_package(catkin REQUIRED COMPONENTS
   cv_bridge
   tf
 )
+
+set(OpenCV_DIR /home/neranger/3rdparty/opencv-4.2.0/build)
 
 #find_package(Eigen3 REQUIRED)
 find_package(PCL REQUIRED)
